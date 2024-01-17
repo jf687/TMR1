@@ -1,0 +1,9 @@
+adj_gen(prob,p): generates a p*p adjacency matrix where each entry has a probability = prob of being an edge.
+prec_from_adj(A): generates the precision matrix from the adjaceny matrix A.
+precision(g, g.hat): calculates the precision between the predicted precision matrix, g, and the true precision matrix g.hat.
+recall(g, g.hat): calculates the recall between the predicted precision matrix, g, and the true precision matrix g.hat.
+GM_gen(n,p,list_hyper,list_init, thresh): generates a simulated precision matrix using the priors in the original graphical model.
+GMx_gen(n,p,list_hyper_x,X): generates simulated p*p precision matrices for each covariate contained in X using the priors of the extended graphical model.
+perform_ROC_simulation(omega.true, n,list_hyper, list_init, N=100, include.glasso=T, include.ssl=T, scale.data = T):
+	returns values for precision, recall, TPR & FPR for several simulations using either glasso or the spike-and-slab model. 
+	These values are then used in plotting ROC and PRC curves. 
